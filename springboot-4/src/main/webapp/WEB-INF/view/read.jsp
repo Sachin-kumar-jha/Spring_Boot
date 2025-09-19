@@ -8,25 +8,18 @@
 <title>Employee Details</title>
 </head>
 <body>
-
+${msg}
 <h2>Employee Details</h2>
-
-<table border="1" cellpadding="5" cellspacing="0">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Date</th>
-        <th>UCode</th>
-    </tr>
     <c:forEach var="e" items="${emp}">
-        <tr>
-            <td><c:out value="${e.id}" /></td>
-            <td><c:out value="${e.name}" /></td>
-            <td><c:out value="${e.date}" /></td>
-            <td><c:out value="${e.ucode}" /></td>
-        </tr>
+            <li><c:out value="${e.id}" /></li>
+            <li><c:out value="${e.name}" /></li>
+            <li><c:out value="${e.date}" /></li>
+            <li><c:out value="${e.ucode}" /></li>
+            
+            <a href="delete?id=${e.id}">Delete</a>
+            
     </c:forEach>
-</table>
+
 
 </body>
 </html>

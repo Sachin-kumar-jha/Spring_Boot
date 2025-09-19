@@ -33,4 +33,5 @@ public class EmployeeDTO {
 	@NotNull(message="date can't be null")
 	private LocalDate date; //Default null
 	
+	private String myfile;
 }

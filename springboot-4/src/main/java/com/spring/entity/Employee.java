@@ -16,4 +16,5 @@ public class Employee {
 	private String name;
 	private LocalDate date;
 	private int ucode; //application generated
+	private String myfile;
 }

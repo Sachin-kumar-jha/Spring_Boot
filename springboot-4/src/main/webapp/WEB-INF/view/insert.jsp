@@ -14,7 +14,7 @@
 </c:forEach>
 
  <!-- Form to take Employee details -->
-    <form action="insert" method="post">
+    <form action="insert" method="post" enctype="multipart/form-data">
         <label for="id">Employee ID:</label>
         <input type="text" name="id" id="id" required><br><br>
         
@@ -22,6 +22,10 @@
         <input type="text" name="name" id="name" required><br><br>
         <label for="date">DATE:</label>
         <input type="date" name="date" id="date" required><br><br>
+        
+        <label for="date">File:</label>
+        <input type="file" name="myfile" id="file" required><br><br>
+        
         <input type="submit" value="Submit">
         
     </form>

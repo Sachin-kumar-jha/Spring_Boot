@@ -1,0 +1,54 @@
+package com.spring.service;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.dto.EmployeeDto;
+import com.spring.dto.EmployeeRequestParam;
+import com.spring.model.Employee;
+import com.spring.repository.EmployeeRepository;
+
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MyServiceImpl implements MyService {
+
+	private final EmployeeRepository empRepository;
+
+	
+	@Override
+	@Transactional
+	public Employee employeeService(EmployeeDto employeeDto) {
+	Employee emp= Employee.builder()
+				.name(employeeDto.getName())
+				.salary(employeeDto.getSalary())
+				.date(LocalDate.now())
+				.build();
+		
+	return empRepository.save(emp);
+	}
+
+
+	@Override
+	public List<Employee> readEmployee() {
+		return empRepository.findAll();
+	}
+
+
+	@Override
+	public Optional<Employee> readById(int id) {
+		Optional<Employee> emp = empRepository.findById(id);
+		return emp;
+	}
+
+
+	@Override
+	public List<Employee> readdByFields(EmployeeRequestParam empl) {
+		return null;
+	}
+}

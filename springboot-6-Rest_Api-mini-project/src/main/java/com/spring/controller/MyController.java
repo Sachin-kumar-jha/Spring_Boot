@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.dto.EmployeeDto;
-import com.spring.dto.EmployeeRequestParam;
+
+import com.spring.dto.EmployeeRequest;
 import com.spring.model.Employee;
 import com.spring.service.MyService;
 
@@ -59,11 +60,12 @@ public class MyController {
 	}
 	
 	
-	@GetMapping("employee")
+	@GetMapping(value = "employee",params = "!name")
 	public ResponseEntity<?> readAll() {
 		List<Employee> employee = service.readEmployee();
 		return ResponseEntity.ok(employee);
 	}
+	
 	
 	@GetMapping("employee/{id}")
 	public ResponseEntity<?> readById(@PathVariable int id) {
@@ -78,7 +80,7 @@ public class MyController {
 	
 	
 	@GetMapping("employee")
-	public void readByFields(@RequestParam EmployeeRequestParam empl) {
-
+	public List<EmployeeRequest> readByFields(@RequestParam List<String>name){
+              return service.readdByFields(name);      
 	}
 }

@@ -7,7 +7,8 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.spring.dto.EmployeeDto;
-import com.spring.dto.EmployeeRequestParam;
+
+import com.spring.dto.EmployeeRequest;
 import com.spring.model.Employee;
 import com.spring.repository.EmployeeRepository;
 
@@ -47,8 +48,14 @@ public class MyServiceImpl implements MyService {
 	}
 
 
-	@Override
-	public List<Employee> readdByFields(EmployeeRequestParam empl) {
-		return null;
+	public List<EmployeeRequest> readdByFields(List<String> names) {
+	    return empRepository.findByNameIn(names).stream()
+	            .map(emp -> EmployeeRequest.builder()
+	                    .name(emp.getName())
+	                    .salary(emp.getSalary() > 10000) // ✅ compiles now
+	                    .build()
+	            )
+	            .toList();
 	}
+
 }

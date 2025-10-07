@@ -12,4 +12,6 @@ import com.spring.model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	List<Employee> findByNameIn(List<String> name);
 
+	List<Employee> findByIdIn(List<String> ids);
+
 }

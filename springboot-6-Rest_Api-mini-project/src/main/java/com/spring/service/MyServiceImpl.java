@@ -48,8 +48,8 @@ public class MyServiceImpl implements MyService {
 	}
 
 
-	public List<EmployeeRequest> readdByFields(List<String> names) {
-	    return empRepository.findByNameIn(names).stream()
+	public List<EmployeeRequest> readdByFields(List<String>ids) {
+	    return empRepository.findByIdIn(ids).stream()
 	            .map(emp -> EmployeeRequest.builder()
 	                    .name(emp.getName())
 	                    .salary(emp.getSalary() > 10000) // ✅ compiles now

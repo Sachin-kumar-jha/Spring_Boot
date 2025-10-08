@@ -1,0 +1,47 @@
+[33mcommit b83f48cb1382e0e99f72e110d46f305c72b97751[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Tue Oct 7 11:21:47 2025 +0530
+
+    message controller added
+
+[33mcommit af937749a6e28796b6bb60fb9c7f05040626fc7c[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Fri Sep 26 01:35:14 2025 +0530
+
+    rest-api practice
+
+[33mcommit f2f93820c77881cd7a9f40ccff51f9a60e50ae1e[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Wed Sep 24 23:34:12 2025 +0530
+
+    working on spring boot crud mini project
+
+[33mcommit e74e8dcb55f88dd2281474cfd18039e13117e144[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Wed Sep 24 01:32:16 2025 +0530
+
+    Rest api added
+
+[33mcommit baa836163854467f5de87874fd60db4fa83d61cd[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Sat Sep 20 02:40:06 2025 +0530
+
+    crud with springboot-MVC
+
+[33mcommit b8d9fa80008602c92f8483aca4146cff7c418c2b[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Thu Sep 18 22:11:42 2025 +0530
+
+    springboot mvc crud added
+
+[33mcommit 6eb919a18e475be718289b0dde77573fbfa13270[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Tue Sep 16 21:47:31 2025 +0530
+
+    springboot-mvc started
+
+[33mcommit 21063670942c1893cfb76868d2b3fee3d9a6b289[m
+Author: Sachin kumar jha <sachinkumarjhasachinkumarjha9@gmail.com>
+Date:   Fri Sep 12 18:26:25 2025 +0530
+
+    spring learnt till database interaction using spring data jpa (first interface CrudRespository)
